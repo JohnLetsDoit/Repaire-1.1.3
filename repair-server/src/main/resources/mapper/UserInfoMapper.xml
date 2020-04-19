@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsw.repair.user.dao.UserDao">
+
+    <resultMap id="UserInfoMap" type="com.tsw.repair.user.model.User">
+        <id column="user_id" property="userId"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="account" column="account"/>
+        <result property="description" column="description"/>
+        <result property="avatar" column="avatar" />
+        <collection property="roles" ofType="com.tsw.repair.role.model.Role" javaType="java.util.List">
+            <id property="roleId" column="role_id"/>
+            <result property="roleName" column="role_name"/>
+            <result property="description" column="description"/>
+        </collection>
+    </resultMap>
+
+    <sql id="BaseUserInfo" >
+         SELECT user.*,role.*
+          FROM tsw_user_info user
+        LEFT JOIN role_user_contact contact
+          ON user.user_id = contact.user_id
+        LEFT JOIN tsw_role_info role
+          ON contact.role_id = role.role_id
+    </sql>
+    <select id="getUserInfoById" resultMap="UserInfoMap" parameterType="java.lang.Long">
+        <include refid="BaseUserInfo"/>
+        WHERE user.user_id = #{userId}
+    </select>
+
+    <select id="getUserInfo" resultMap="UserInfoMap" >
+        <include refid="BaseUserInfo"/>
+    </select>
+
+    <select id="searchUserInfo" resultMap="UserInfoMap" parameterType="com.tsw.repair.user.vo.SearchVo">
+        <include refid="BaseUserInfo"/>
+        <where>
+            CONCAT(name, account) LIKE CONCAT('%',#{content},'%')
+        </where>
+    </select>
+
+</mapper>

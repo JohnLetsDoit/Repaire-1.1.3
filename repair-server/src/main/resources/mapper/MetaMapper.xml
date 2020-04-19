@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsw.repair.role.dao.MetaDao">
+    <resultMap id="MetaMap" type="com.tsw.repair.role.model.Meta">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="icon" property="icon"/>
+        <result column="affix" property="affix"/>
+    </resultMap>
+
+    <select id="getMetaList" resultMap="MetaMap">
+        SELECT * FROM tsw_meta_info
+    </select>
+
+    <select id="getMetaById" resultMap="MetaMap" parameterType="java.lang.Long">
+        SELECT * FROM tsw_meta_info WHERE id=#{id}
+    </select>
+
+    <insert id="addMeta" useGeneratedKeys="true" keyColumn="id" keyProperty="id" parameterType="com.tsw.repair.role.model.Meta">
+        INSERT INTO tsw_meta_info (title, icon, affix) VALUES ( #{title}, #{icon}, #{affix} )
+    </insert>
+
+    <update id="updateMeta" parameterType="com.tsw.repair.role.model.Meta">
+        UPDATE tsw_meta_info
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="icon != null and icon != ''">
+                icon = #{icon},
+            </if>
+            <if test="affix != null and affix != ''">
+                affix = #{affix}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteMeta" parameterType="java.lang.Long">
+        DELETE FROM tsw_meta_info WHERE id = #{id}
+    </delete>
+</mapper>

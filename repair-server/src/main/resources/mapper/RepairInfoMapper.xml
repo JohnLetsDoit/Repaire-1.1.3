@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsw.repair.repairInfo.dao.RepairInfoDao">
+    <resultMap id="RepairInfoMap" type="com.tsw.repair.repairInfo.model.RepairInfo">
+        <id column="repair_id" property="repairId"/>
+        <result property="number" column="number"/>
+        <result property="repairName" column="repair_name"/>
+        <result property="repairAddress" column="repair_address" />
+        <result property="repairRoom" column="repair_room"/>
+        <result property="phone" column="phone" />
+        <result property="faultId" column="fault_id"/>
+        <result property="faultDesc" column="fault_desc"/>
+        <result property="orderTime" column="order_time" />
+        <result property="description" column="description"/>
+
+        <result property="recordUserId" column="record_user_id"/>
+        <result property="serviceUserId" column="service_user_id"/>
+        <result property="remark" column="remark" />
+        <result property="state" column="state" />
+        <result property="category" column="category" />
+        <result property="createTime" column="create_time" />
+        <result property="repairTime" column="repair_time" />
+        <association property="recordUser" select="com.tsw.repair.user.dao.UserDao.getUserInfoById" column="record_user_id">
+        </association>
+        <association property="serviceUser" select="com.tsw.repair.user.dao.UserDao.getUserInfoById" column="service_user_id"></association>
+    </resultMap>
+    <!--插入报修信息-->
+    <insert id="addRepairInfo" useGeneratedKeys="true" keyColumn="repair_id" keyProperty="repairId" parameterType="com.tsw.repair.repairInfo.model.RepairInfo">
+        INSERT INTO tsw_repair_info (
+            number,
+            repair_name,
+            repair_address,
+            repair_room,
+            phone,
+            fault_id,
+            fault_desc,
+            order_time,
+            description,
+            record_user_id,
+            service_user_id,
+            remark,
+            state,
+            category,
+            create_time,
+            repair_time
+        )
+        VALUES
+	        ( #{number},
+              #{repairName},
+              #{repairAddress},
+              #{repairRoom},
+              #{phone},
+              #{faultId},
+              #{faultDesc},
+              #{orderTime},
+              #{description},
+              #{recordUserId},
+              #{serviceUserId},
+              #{remark},
+              #{state},
+              #{category},
+              #{createTime},
+              #{repairTime}
+	    )
+    </insert>
+
+
+    <select id="getRepairInfo" resultMap="RepairInfoMap">
+          SELECT
+            *
+          FROM
+            tsw_repair_info
+          ORDER BY create_time DESC
+    </select>
+    <!--查找所有的报修信息-->
+    <select id="selectAllInfo" resultMap="RepairInfoMap" >
+        select * from tsw_repair_info order by create_time desc
+    </select>
+    <!--查找出打印工单-->
+    <select id="selectWorkOrder"  parameterType="java.lang.Integer" resultMap="RepairInfoMap">
+       select * from tsw_work_order where id=#{id}
+    </select>
+
+    <!--按照分类查找-->
+    <select id="selectRepairInfoByCategory" resultMap="RepairInfoMap">
+        select * from tsw_repair_info where category = #{category}
+    </select>
+    
+    
+    <select id="getRepairInfoBySearch" parameterType="com.tsw.repair.repairInfo.vo.SearchVo" resultMap="RepairInfoMap">
+        SELECT * FROM tsw_repair_info
+        <where>
+            <if test="state != null and state != 0 ">
+                state = #{state}
+            </if>
+            <if test="orderTime != null and orderTime != '' ">
+              and order_time = #{orderTime}
+            </if>
+            <if test="content != null and content != '' ">
+              and CONCAT(repair_name, number) LIKE CONCAT('%',#{content},'%')
+            </if>
+        </where>
+    </select>
+
+    <update id="updateStateByRepairId" >
+        UPDATE tsw_repair_info
+        <set>
+            state = #{state},
+        </set>
+        WHERE repair_id = #{repairId}
+    </update>
+
+    <update id="updateRepairInfo" parameterType="com.tsw.repair.repairInfo.model.RepairInfo">
+        UPDATE tsw_repair_info
+        <set>
+            <if test="number !=null and number != ''">
+                `number` = #{number},
+            </if>
+            <if test="repairName != null and repairName != ''">
+                repair_name = #{repairName},
+            </if>
+            <if test="repairAddress != null and repairAddress != ''">
+                repair_address = #{repairAddress},
+            </if>
+            <if test="repairRoom != null and repairRoom != ''">
+                repair_room = #{repairRoom},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="faultId != null and faultId != ''">
+                fault_id = #{faultId},
+            </if>
+            <if test="faultDesc != null and faultDesc != ''">
+                fault_desc = #{faultDesc},
+            </if>
+            <if test="orderTime != null and orderTime != ''">
+                order_time = #{orderTime},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="recordUserId != null and recordUserId != 0">
+                record_user_id = #{recordUserId},
+            </if>
+            <if test="serviceUserId != null and serviceUserId != 0">
+                service_user_id = #{serviceUserId},
+            </if>
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+            <if test="state != null and state != 0">
+                state = #{state},
+            </if>
+            <if test="category != null and state != ''">
+                category = #{category},
+            </if>
+                create_time = #{createTime},
+                repair_time = #{repairTime}
+        </set>
+        WHERE repair_id = #{repairId}
+    </update>
+
+    <delete id="deleteRepairInfo" parameterType="java.lang.Long">
+        DELETE FROM tsw_repair_info WHERE repair_id = #{repairId}
+    </delete>
+    <!--按照状态查找-->
+
+</mapper>

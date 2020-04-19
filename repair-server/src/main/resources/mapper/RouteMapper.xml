@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsw.repair.role.dao.RouteDao">
+    <resultMap id="RouteMap" type="com.tsw.repair.role.model.Route">
+        <id column="route_id" property="routeId"/>
+        <result column="path" property="path"/>
+        <result column="component" property="component"/>
+        <result column="route_name" property="routeName"/>
+        <result column="redirect" property="redirect"/>
+        <result column="meta_title" property="metaTitle" />
+        <result column="meta_icon" property="metaIcon"/>
+        <result column="cid" property="cid"/>
+        <result column="hidden" property="hidden" />
+        <result column="always_show" property="alwaysShow"/>
+        <result column="is_child" property="isChild"/>
+    </resultMap>
+    <select id="getRouteList" resultMap="RouteMap">
+        SELECT * FROM tsw_route_info
+    </select>
+
+    <select id="getRouteById" resultMap="RouteMap" parameterType="java.lang.Long">
+        SELECT * FROM tsw_route_info WHERE route_id = #{routeId}
+    </select>
+
+    <insert id="addRoute" useGeneratedKeys="true" keyProperty="routeId" keyColumn="route_id" parameterType="com.tsw.repair.role.model.Route">
+        INSERT INTO tsw_route_info (path, component, route_name, redirect, meta_title, meta_icon, cid, hidden, always_show, is_child)
+        VALUES (#{path}, #{component}, #{routeName}, #{redirect}, #{metaTitle}, #{metaIcon}, #{cid}, #{hidden}, #{alwaysShow}, #{isChild})
+    </insert>
+
+    <update id="updateRoute"  parameterType="com.tsw.repair.role.model.Route">
+        UPDATE tsw_route_info
+        <set>
+            <if test="path != null and path != ''">
+                path = #{path},
+            </if>
+            <if test="component != null and component != ''">
+                component = #{component},
+            </if>
+            <if test="routeName != null and routeName != ''">
+                route_name = #{routeName},
+            </if>
+            <if test="redirect != null and redirect != ''">
+                redirect = #{redirect},
+            </if>
+            <if test="metaTitle != null and metaTitle != ''">
+                meta_title = #{metaTitle},
+            </if>
+            <if test="metaIcon != null and metaIcon != ''">
+                meta_icon = #{metaIcon},
+            </if>
+            <if test="cid != null and cid != ''">
+                cid = #{cid},
+            </if>
+            <if test="hidden != null">
+                hidden = #{hidden},
+            </if>
+            <if test="alwaysShow != null">
+                always_show = #{alwaysShow},
+            </if>
+            <if test="isChild != null">
+                is_child = #{isChild}
+            </if>
+        </set>
+         WHERE route_id = #{routeId}
+    </update>
+
+    <delete id="deleteRoute" parameterType="java.lang.Long">
+        DELETE FROM tsw_route_info WHERE route_id = #{routeId}
+    </delete>
+
+</mapper>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsw.repair.role.dao.RoleRouteDao">
+    <resultMap id="RoleRouteMap" type="com.tsw.repair.role.model.RoleRoute">
+        <result column="role_id" property="roleId" />
+        <result column="route_id" property="routeId"/>
+    </resultMap>
+
+    <insert id="addRoleRoute" keyProperty="roleId" keyColumn="role_id" parameterType="com.tsw.repair.role.model.RoleRoute">
+        INSERT INTO
+          role_route_contact (role_id, route_id)
+        VALUES
+          (#{roleId}, #{routeId})
+    </insert>
+
+    <insert id="addRoleRoutes" parameterType="java.util.List">
+        INSERT INTO
+          role_route_contact (role_id, route_id)
+        VALUES
+        <foreach collection="roleRoutes"  item="item" index="index" separator=",">
+          <if test="item.roleId !=null and item.routeId != null">
+              ( #{item.roleId}, #{item.routeId} )
+          </if>
+        </foreach>
+    </insert>
+
+    <delete id="deleteRouteById" parameterType="java.lang.Long">
+        DELETE FROM role_route_contact WHERE route_id = #{routeId}
+    </delete>
+
+    <delete id="deleteRoleById" parameterType="java.lang.Long">
+        DELETE FROM role_route_contact WHERE role_id = #{roleId}
+    </delete>
+
+</mapper>

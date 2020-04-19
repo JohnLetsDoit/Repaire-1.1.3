@@ -1,0 +1,9 @@
+FROM mysql:8.0.13
+
+MAINTAINER zx "187340555@qq.com"
+
+ENV LANG C.UTF-8
+
+COPY ./repair-server/src/main/resources/repair.sql /docker-entrypoint-initdb.d/repair.sql
+
+COPY ./docker/repair-mysql/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf

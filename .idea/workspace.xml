@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="feb84903-49ed-4175-b23f-e37f7545b587" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/common/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/common/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/vo/SearchVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/vo/ServiceUserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/RouteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/dao/RoleRouteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/RoleRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/Impl/RouteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/RouteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/vo/SearchVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/utils/RouteUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/utils/TransferArrUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RoleRouteMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/contact/contactTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/meta/metaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/repair/RepairInfoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/role/roleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/route/routeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/user/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/RepairApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/RepairApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/anno/LoginToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/anno/LoginToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/anno/PassToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/anno/PassToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/constant/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/constant/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/constant/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/constant/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/faultInfo/indexCOn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/faultInfo/model/FaultInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/faultInfo/model/FaultInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/controller/RepairInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/controller/RepairInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/dao/RepairInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/dao/RepairInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/model/RepairInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/model/RepairInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/model/Routers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/service/Impl/RepairInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/service/Impl/RepairInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/service/RepairInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/repairInfo/service/RepairInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/result/ParameterInvalidItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/result/ParameterInvalidItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/dao/RoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/dao/RouteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/dao/RouteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Meta.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Meta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/Impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/Impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/role/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/controller/RoutersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/utils/GetTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/java/com/tsw/repair/utils/GetTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/LoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/LoginMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/MetaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/MetaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RepairInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RepairInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RouteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/RouteMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/RepairApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-server/src/test/java/com/tsw/repair/RepairApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repair-admin/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/repair-server" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1403" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tsw-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tsw-repair" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tsw-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tsw-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="repair-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tsw-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tsw-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="repair-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="feb84903-49ed-4175-b23f-e37f7545b587" name="Default Changelist" comment="" />
+      <created>1564564949305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564564949305</updated>
+      <workItem from="1564564951540" duration="314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="314000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1403" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981631" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/repair-admin/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

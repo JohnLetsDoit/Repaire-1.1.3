@@ -1,0 +1,34 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  #  mapper-locations: /com/tsw/repair/TreeDao/**/*.xml
+
+  mapper-locations: classpath:mapper/**/*.xml
+
+spring:
+  application:
+    name: repairUserApi
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tswrepair
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 150
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+role:
+  route:
+    hidden: false
+    alwaysShow: true
